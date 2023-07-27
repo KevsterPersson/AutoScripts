@@ -14,7 +14,7 @@ def run_2077():
 
 
 # 哔哩哔哩网页端视频播放
-def run_bilibili():
+def run_Bilibili():
     gv.video_sec = 300  # 设置播放时长
     gv.count_max = 200  # 设置循环次数
     func_Bilibili.func_bilibili()
@@ -34,7 +34,7 @@ def run_iQIYI():
 
 
 # 古墓丽影暗影
-def run_tombraider():
+def run_TombRaider():
     gv.count_max = 50  # 设置外循环次数
     gv.sub_count_max = 5  # 设置内循环次数
     func_Raider.func_TombRaider()
@@ -54,7 +54,7 @@ if __name__ == "__main__":
     section_start = time.time()
 
     # 执行区
-    run_bilibili()
+    run_Bilibili()
 
     # 计时器
     section_finish = time.time()
