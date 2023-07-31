@@ -10,7 +10,7 @@ pya.PAUSE = 3
 benchmark = lib_3DMark.BenchMark()
 
 # 循环次数设置
-gv.count_max = 5  # 默认循环次数
+gv.count_max_3DMark = 5  # 默认循环次数
 
 
 def run():
@@ -28,9 +28,9 @@ def func_3DMark():
     time.sleep(3)
     print('3DMark测试', '\n')
 
-    gv.count_times = 1
-    count = gv.count_times
-    while count < gv.count_max:
+    gv.count_times_3DMark = 1
+    count = gv.count_times_3DMark
+    while count < gv.count_max_3DMark:
         print('--- 第', count, '次 ---', '\n')
         run()
         print('测试完成', '\n')

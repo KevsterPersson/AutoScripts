@@ -10,8 +10,8 @@ pya.PAUSE = 3
 lora = lib_TombRaider.TombRaider()
 
 # 循环次数设置
-gv.count_max = 3  # 默认外循环次数
-gv.sub_count_max = 3  # 默认内循环次数
+gv.count_max_TombRaider = 3  # 默认外循环次数
+gv.sub_count_max_TombRaider = 3  # 默认内循环次数
 
 
 def func_TombRaider():
@@ -21,8 +21,8 @@ def func_TombRaider():
 
     # 测试项 外循环
     gv.count_times = 1
-    count = gv.count_times
-    while count < gv.count_max:
+    count = gv.count_times_TombRaider
+    while count < gv.count_max_TombRaider:
         count += 1
         round_start = time.time()
         print('--- 第', count - 1, '轮 ---', '\n')
@@ -56,7 +56,7 @@ def func_TombRaider():
 
         # 测试项 内循环
         sub_count = 1
-        while sub_count < gv.sub_count_max:  # 设置测试次数
+        while sub_count < gv.sub_count_max_TombRaider:  # 设置测试次数
             print('&&&', '第', sub_count, '回', '&&&', '\n')
             cycle_start = time.time()
             lora.keyboard_press('r', 200)
@@ -69,8 +69,8 @@ def func_TombRaider():
             sub_count += 1
             cycle_record = cycle_time
             cycle_full_time = cycle_record + cycle_time
-            if sub_count == gv.sub_count_max:
-                print('内循环', gv.sub_count_max - 1, '次，总耗时', round(cycle_full_time - cycle_time), '秒', '\n')
+            if sub_count == gv.sub_count_max_TombRaider:
+                print('内循环', gv.sub_count_max_TombRaider - 1, '次，总耗时', round(cycle_full_time - cycle_time), '秒', '\n')
 
         # 退出游戏
         lora.keyboard_press('esc', 5)
@@ -95,8 +95,8 @@ def func_TombRaider():
         print('外循环耗时', round(round_time), '秒', '\n')
         round_record = round_time
         round_full_time = round_record + round_time
-        if count == gv.count_max:
-            print('外循环', gv.count_max - 1, '次，总耗时', round(round_full_time - round_time), '秒', '\n')
+        if count == gv.count_max_TombRaider:
+            print('外循环', gv.count_max_TombRaider - 1, '次，总耗时', round(round_full_time - round_time), '秒', '\n')
 
         cycle_start = None
         cycle_finish = None

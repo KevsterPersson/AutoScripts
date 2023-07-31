@@ -10,8 +10,8 @@ pya.PAUSE = 3
 furmark = lib_FurMark.FurMark()
 
 # 循环次数设置
-gv.count_max = 5  # 默认循环次数
-gv.sleep_time = 300
+gv.count_max_FurMark = 5  # 默认循环次数
+gv.sleep_time_FurMark = 300
 
 
 def func_FurMark():
@@ -27,14 +27,14 @@ def func_FurMark():
 
         furmark.find_icon_and_click('Pictures/FurMark/test_on.png')
         furmark.find_icon_and_click('Pictures/FurMark/test_go.png')
-        time.sleep(gv.sleep_time)
+        time.sleep(gv.sleep_time_FurMark)
         furmark.keyboard_press('esc', 60)
         furmark.find_icon_and_click('Pictures/FurMark/quit.png')
         print('测试完成', '\n')
 
     gv.count_times = 1
-    count = gv.count_times
-    while count < gv.count_max:
+    count = gv.count_times_FurMark
+    while count < gv.count_max_FurMark:
         print('--- 第', count, '次 ---', '\n')
         run()
         count += 1
