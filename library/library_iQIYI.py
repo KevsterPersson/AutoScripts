@@ -73,43 +73,8 @@ class iQIYI:
         del check_icon
         gc.collect()
 
-    def check_media_play(self, path1, path2):  # 检查Path路径下的图标是否存在，通常用来检查播放器是否正在播放，如果在播放则无操作，如果没有播放则点击播放
-        check_icon1 = pya.locateCenterOnScreen(path1)
-        check_icon2 = pya.locateCenterOnScreen(path2)
-        if check_icon1:
-            pya.click(check_icon1, duration=1)
-        elif check_icon2:
-            time.sleep(2)
-
-        check_icon1 = None
-        check_icon2 = None
-        del check_icon1
-        del check_icon2
-        gc.collect()
-
-    def wait_for_game_update(self, path1, path2,
-                             path3):  # 等待游戏更新，Path1是“请求更新”功能图标，Path2是“正在下载”功能图标，Path3是完成下载后“开始游戏”功能图标
-        wait_icon1 = pya.locateCenterOnScreen(path1, confident=0.9)
-        wait_icon2 = pya.locateCenterOnScreen(path2, confident=0.9)
-        wait_icon3 = pya.locateCenterOnScreen(path3, confident=0.9)
-        if wait_icon1:
-            pya.click(wait_icon1, duration=1)
-            while wait_icon2:
-                if wait_icon3:
-                    pya.click(wait_icon3, duration=1)
-                else:
-                    time.sleep(5)
-
-        wait_icon1 = None
-        wait_icon2 = None
-        wait_icon3 = None
-        del wait_icon1
-        del wait_icon2
-        del wait_icon3
-        gc.collect()
-
     def mouse_move_and_click(self, x1_axis, y1_axis, x2_axis, y2_axis, x3_axis, y3_axis):
-        count = gv.count_times
+        count = gv.count_times_iQIYI
         if (count % 3) == 1:
             pya.moveTo(x1_axis, y1_axis, 1)
             pya.click(x1_axis, y1_axis, duration=1)
@@ -154,26 +119,13 @@ class iQIYI:
 
         gc.collect()
 
-    def mouse_double_click(self):
-        pya.doubleClick()
-        time.sleep(1)
+    def keyboard_write_press(self, write_content, write_sec, press_content, wait_sec):
+        pya.write(write_content, write_sec)
+        pya.press(press_content, wait_sec)
 
-        gc.collect()
-
-    def keyboard_write(self, content, sec):  # 键盘输入内容
-        pya.write(content, sec)
-        time.sleep(1)
-
-        content = None
-        sec = None
-        del content
-        del sec
-        gc.collect()
-
-    def keyboard_press(self, content):
-        pya.press(content)
-        time.sleep(3)
-
-        content = None
-        del content
+        write_content = None
+        write_sec = None
+        press_content = None
+        wait_sec = None
+        del write_content, write_sec, press_content, wait_sec
         gc.collect()

@@ -72,7 +72,7 @@ class Bilibili:
         gc.collect()
 
     def mouse_move_and_click(self, x1_axis, y1_axis, x2_axis, y2_axis, x3_axis, y3_axis):
-        count = gv.count_times
+        count = gv.count_times_bilibili
         if (count % 3) == 1:
             pya.moveTo(x1_axis, y1_axis, 1)
             time.sleep(0.5)
