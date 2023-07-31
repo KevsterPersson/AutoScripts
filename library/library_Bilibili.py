@@ -8,7 +8,7 @@ import global_var as gv
 class Bilibili:
 
     def find_icon_and_click(self, path):  # 在屏幕中寻找Path路径下的图标，然后鼠标左键点击一次
-        find_location = pya.locateCenterOnScreen(path, confidence=0.95)
+        find_location = pya.locateCenterOnScreen(path, confidence=0.8)
         if find_location:
             pya.click(find_location, duration=0.5)
             # print(find_location)
@@ -21,7 +21,7 @@ class Bilibili:
         gc.collect()
 
     def get_position_and_move_to(self, path):
-        get_position = pya.locateCenterOnScreen(path, confidence=0.95)
+        get_position = pya.locateCenterOnScreen(path, confidence=0.9)
         pya.moveTo(get_position)
         time.sleep(1)
 
@@ -34,9 +34,9 @@ class Bilibili:
         check_icon2 = pya.locateCenterOnScreen(path2, confidence=0.95)
         if check_icon1:
             pya.click(check_icon1, duration=0.5)
-            time.sleep(1)
+            time.sleep(10)
         elif check_icon2:
-            time.sleep(1)
+            time.sleep(10)
 
         check_icon1 = None
         check_icon2 = None
@@ -44,9 +44,9 @@ class Bilibili:
         del check_icon2
         gc.collect()
 
-    def keyboard_write(self, content, sec1, sec2):  # 键盘输入内容
-        pya.write(content, sec1)
-        time.sleep(sec2)
+    def keyboard_write(self, content, write_speed, sleep_sec):  # 键盘输入内容
+        pya.write(content, write_speed)
+        time.sleep(sleep_sec)
 
         content = None
         del content
@@ -56,6 +56,17 @@ class Bilibili:
         pya.moveTo(x_axis, y_axis, 1)
         pya.doubleClick()
         time.sleep(1)
+
+        x_axis = None
+        y_axis = None
+        del x_axis
+        del y_axis
+        gc.collect()
+
+    def move_to_and_click(self, x_axis, y_axis, sleep_sec):
+        pya.moveTo(x_axis, y_axis, duration=0.5)
+        pya.click()
+        time.sleep(sleep_sec)
 
         x_axis = None
         y_axis = None
@@ -78,25 +89,25 @@ class Bilibili:
             time.sleep(0.5)
             pya.click(x1_axis, y1_axis, duration=0.5)
             time.sleep(3)
-            print('开始播放第 1 段视频')
+            # print('开始播放第 1 段视频')
         elif (count % 3) == 2:
             pya.moveTo(x2_axis, y2_axis, 1)
             time.sleep(0.5)
             pya.click(x2_axis, y2_axis, duration=0.5)
             time.sleep(3)
-            print('开始播放第 2 段视频')
+            # print('开始播放第 2 段视频')
         elif (count % 3) == 0:
             pya.moveTo(x3_axis, y3_axis, 1)
             time.sleep(0.5)
             pya.click(x3_axis, y3_axis, duration=0.5)
             time.sleep(3)
-            print('开始播放第 3 段视频')
+            # print('开始播放第 3 段视频')
         else:
             pya.moveTo(x1_axis, y1_axis, 1)
             time.sleep(0.5)
             pya.click(x1_axis, y1_axis, duration=0.5)
             time.sleep(3)
-            print('开始播放第 1 段视频')
+            # print('开始播放第 1 段视频')
 
         x1_axis = None
         y1_axis = None
