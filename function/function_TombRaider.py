@@ -20,7 +20,7 @@ def func_TombRaider():
     print('古墓丽影暗影', '\n')
 
     # 测试项 外循环
-    gv.count_times = 1
+    gv.count_times_TombRaider = 1
     count = gv.count_times_TombRaider
     while count < gv.count_max_TombRaider:
         count += 1

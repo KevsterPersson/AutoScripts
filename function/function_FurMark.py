@@ -32,7 +32,7 @@ def func_FurMark():
         furmark.find_icon_and_click('Pictures/FurMark/quit.png')
         print('测试完成', '\n')
 
-    gv.count_times = 1
+    gv.count_times_FurMark = 1
     count = gv.count_times_FurMark
     while count < gv.count_max_FurMark:
         print('--- 第', count, '次 ---', '\n')
