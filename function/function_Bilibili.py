@@ -19,7 +19,7 @@ def func_bilibili():
     print('哔哩哔哩', '\n')
 
     # 测试项
-    gv.count_times = 1
+    gv.count_times_bilibili = 1
     count = gv.count_times_bilibili
     while count < gv.count_max_bilibili:
         print('--- 第', count, '次 ---', '\n')
