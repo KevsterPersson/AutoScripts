@@ -62,6 +62,7 @@ if __name__ == "__main__":
     section_start = time.time()
 
     # run
+    run_Bilibili()
 
     # 计时器
     section_finish = time.time()
