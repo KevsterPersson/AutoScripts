@@ -63,9 +63,9 @@ class Bilibili:
         del y_axis
         gc.collect()
 
-    def keyboard_press(self, key, sec):
+    def keyboard_press(self, key, sleep_sec):
         pyd.press(key)
-        time.sleep(sec)
+        time.sleep(sleep_sec)
 
         key = None
         del key
@@ -78,25 +78,25 @@ class Bilibili:
             time.sleep(0.5)
             pya.click(x1_axis, y1_axis, duration=0.5)
             time.sleep(3)
-            print('开始播放第 1 段视频')
+            # print('开始播放第 1 段视频')
         elif (count % 3) == 2:
             pya.moveTo(x2_axis, y2_axis, 1)
             time.sleep(0.5)
             pya.click(x2_axis, y2_axis, duration=0.5)
             time.sleep(3)
-            print('开始播放第 2 段视频')
+            # print('开始播放第 2 段视频')
         elif (count % 3) == 0:
             pya.moveTo(x3_axis, y3_axis, 1)
             time.sleep(0.5)
             pya.click(x3_axis, y3_axis, duration=0.5)
             time.sleep(3)
-            print('开始播放第 3 段视频')
+            # print('开始播放第 3 段视频')
         else:
             pya.moveTo(x1_axis, y1_axis, 1)
             time.sleep(0.5)
             pya.click(x1_axis, y1_axis, duration=0.5)
             time.sleep(3)
-            print('开始播放第 1 段视频')
+            # print('开始播放第 1 段视频')
 
         x1_axis = None
         y1_axis = None
