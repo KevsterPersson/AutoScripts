@@ -19,7 +19,7 @@ def func_iQIYI():
     print('爱奇艺客户端播放测试', '\n')
 
     # 测试
-    gv.count_times = 1
+    gv.count_times_iQIYI = 1
     count = gv.count_times_iQIYI
     while count < gv.max_count_iQIYI:
         print('--- 第', count, '次 ---', '\n')
