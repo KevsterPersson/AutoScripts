@@ -51,7 +51,7 @@ def run_FurMark():
 # 腾讯视频
 def run_TencentVideo():
     gv.tencent_sleep_time = 300  # 默认播放时长设置
-    gv.tencent_max_count = 5  # 默认循环次数设置
+    gv.tencent_max_count = 200  # 默认循环次数设置
     func_TencentVideo.func_TencentVideo()
 
 
