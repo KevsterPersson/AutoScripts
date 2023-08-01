@@ -21,8 +21,10 @@ class TencentVideo:
     def select_video(self, x1_axis, y1_axis, x2_axis, y2_axis, x3_axis, y3_axis):
         if (gv.tencent_count_times % 3) == 1:
             pya.click(x1_axis, y1_axis, duration=0.5)
+            print('1')
         elif (gv.tencent_count_times % 3) == 2:
             pya.click(x2_axis, y2_axis, duration=0.5)
+            print('2')
         elif (gv.tencent_count_times % 3) == 0:
             pya.click(x3_axis, y3_axis, duration=0.5)
 
