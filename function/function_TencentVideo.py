@@ -35,10 +35,10 @@ def func_TencentVideo():
     print('腾讯视频', '\n')
 
     gv.tencent_count_times = 1
-    count = gv.tencent_count_times
-    while count < gv.tencent_max_count:
-        print('--- 第', count, '次 ---', '\n')
+    # count = gv.tencent_count_times
+    while gv.tencent_count_times < gv.tencent_max_count:
+        print('--- 第', gv.tencent_count_times, '次 ---', '\n')
         run()
 
         print('*** 完成 ***', '\n')
-        count += 1
+        gv.tencent_count_times += 1
