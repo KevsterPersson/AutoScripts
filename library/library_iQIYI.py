@@ -74,14 +74,13 @@ class iQIYI:
         gc.collect()
 
     def mouse_move_and_click(self, x1_axis, y1_axis, x2_axis, y2_axis, x3_axis, y3_axis):
-        count = gv.count_times_iQIYI
-        if (count % 3) == 1:
+        if (gv.count_times_iQIYI % 3) == 1:
             pya.moveTo(x1_axis, y1_axis, 1)
             pya.click(x1_axis, y1_axis, duration=1)
-        elif (count % 3) == 2:
+        elif (gv.count_times_iQIYI % 3) == 2:
             pya.moveTo(x2_axis, y2_axis, 1)
             pya.click(x2_axis, y2_axis, duration=1)
-        elif (count % 3) == 0:
+        elif (gv.count_times_iQIYI % 3) == 0:
             pya.moveTo(x3_axis, y3_axis, 1)
             pya.click(x3_axis, y3_axis, duration=1)
         else:
