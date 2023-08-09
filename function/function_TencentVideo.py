@@ -14,6 +14,7 @@ gv.tencent_max_count = 5  # 默认循环次数设置
 
 
 def run():
+    print('--- 第', gv.tencent_count_times, '次 ---', '\n')
     tencent.find_icon_and_click('Pictures/common_win_button/search.png')
     tencent.keyboard_write_press('tengxunshipin', 0.2, 'enter', 10)
     tencent.move_to_click(566, 493, 0.5, 10)
@@ -35,10 +36,9 @@ def func_TencentVideo():
     print('腾讯视频', '\n')
 
     gv.tencent_count_times = 1
-    count = gv.tencent_count_times
-    while count < gv.tencent_max_count:
-        print('--- 第', count, '次 ---', '\n')
+    while gv.tencent_count_times < gv.tencent_max_count:
+
         run()
 
         print('*** 完成 ***', '\n')
-        count += 1
+        gv.tencent_count_times += 1
