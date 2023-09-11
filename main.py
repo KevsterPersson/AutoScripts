@@ -16,7 +16,7 @@ def run_2077():
 
 # 哔哩哔哩
 def run_Bilibili():
-    gv.video_sec_bilibili = 2000  # 设置播放时长
+    gv.video_sec_bilibili = 1800  # 设置播放时长
     gv.count_max_bilibili = 2000  # 设置循环次数
     func_Bilibili.func_bilibili()
 
@@ -29,8 +29,8 @@ def run_3DMark():
 
 # 爱奇艺
 def run_iQIYI():
-    gv.sleep_time_iQIYI = 1000  # 设置播放时长设置
-    gv.max_count_iQIYI = 20  # 设置循环次数设置
+    gv.sleep_time_iQIYI = 1800  # 设置播放时长设置
+    gv.max_count_iQIYI = 2000  # 设置循环次数设置
     func_iQIYI.func_iQIYI()
 
 
@@ -63,6 +63,7 @@ if __name__ == "__main__":
 
     # run
     run_Bilibili()
+    run_iQIYI()
 
     # 计时器
     section_finish = time.time()
