@@ -25,7 +25,10 @@ def func_bilibili():
         round_start = time.time()
         bilibili.webbrowser('https://www.bilibili.com/bangumi/play/ep703938?from_spmid=666.25.episode.0',
                             'https://www.bilibili.com/bangumi/play/ep761273?from_spmid=666.25.episode.0',
-                            'https://www.bilibili.com/bangumi/play/ep764993?from_spmid=666.25.episode.0', 5)
+                            'https://www.bilibili.com/bangumi/play/ep764993?from_spmid=666.25.episode.0',
+                            'https://www.bilibili.com/bangumi/play/ep761196?from_spmid=666.25.episode.0',
+                            'https://www.bilibili.com/bangumi/play/ep767923?from_spmid=666.25.episode.0',
+                            'https://www.bilibili.com/bangumi/play/ep327285?from_spmid=666.25.episode.0', 30)
         bilibili.move_to_and_double_click(1560, 1014)
         print('第', gv.count_times_bilibili % 3, '段视频播放', gv.video_sec_bilibili, '秒')
         time.sleep(gv.video_sec_bilibili)
