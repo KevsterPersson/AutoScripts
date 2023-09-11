@@ -16,8 +16,8 @@ def run_2077():
 
 # 哔哩哔哩
 def run_Bilibili():
-    gv.video_sec_bilibili = 300  # 设置播放时长
-    gv.count_max_bilibili = 200  # 设置循环次数
+    gv.video_sec_bilibili = 2000  # 设置播放时长
+    gv.count_max_bilibili = 2000  # 设置循环次数
     func_Bilibili.func_bilibili()
 
 
@@ -62,6 +62,7 @@ if __name__ == "__main__":
     section_start = time.time()
 
     # run
+    run_Bilibili()
 
     # 计时器
     section_finish = time.time()
